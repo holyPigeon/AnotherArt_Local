@@ -2,7 +2,7 @@
   <div class="container">
     <UnivModal v-if="univModal == true"></UnivModal>
     <TermsOfService></TermsOfService>
-    <UserRegister></UserRegister>
+    <UserRegister @openUnivModal="openUnivModal"></UserRegister>
 
   </div>
 
@@ -20,16 +20,21 @@ export default {
       univModal: false,
     }
   },
+  methods: {
+    openUnivModal() {
+      this.univModal = true;
+    }
+  },
   components: {
     TermsOfService,
     UserRegister,
     UnivModal
-}
+  }
 }
 </script>
 
 <style>
-  body{
-    background-color: rgb(249, 249, 249);
-  }
+body {
+  background-color: rgb(249, 249, 249);
+}
 </style>

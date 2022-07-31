@@ -9,20 +9,20 @@
                         <form class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="studentId" class="form-label">이름</label>
-                                    <input type="text" class="form-control" id="studentId" placeholder="학번" value=""
+                                    <label for="" class="form-label">이름</label>
+                                    <input type="text" class="form-control" placeholder="이름" value=""
                                         required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="studentId" class="form-label">닉네임</label>
-                                    <input type="text" class="form-control" id="studentId" placeholder="학번" value=""
+                                    <label for="" class="form-label">닉네임</label>
+                                    <input type="text" class="form-control" placeholder="닉네임" value=""
                                         required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
                                     <label for="studentId" class="form-label">아이디</label> <button class="btn btn-outline-dark">중복체크</button>
-                                    <input type="text" class="form-control" id="studentId" placeholder="학번" value=""
+                                    <input type="text" class="form-control" id="studentId" placeholder="아이디" value=""
                                         required>
                                 </div>
 
@@ -39,8 +39,8 @@
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="studentId" class="form-label">학교명</label> <button class="btn btn-outline-dark">학교 찾기</button>
-                                    <input type="text" class="form-control" id="studentId" placeholder="학번" value=""
+                                    <label for="" class="form-label">학교명</label> <button @click="$emit('openUnivModal')" class="btn btn-outline-dark">학교 찾기</button>
+                                    <input type="text" class="form-control" placeholder="학교명" value=""
                                         required>
                                 </div>
 
