@@ -22,18 +22,18 @@
         <!-- univModal -->
         <div class="modal fade" id="univModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content h-598">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">univModal</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                                aria-describedby="search-addon" />
+                            <input v-model="univName" type="search" class="form-control rounded" placeholder="Search"
+                                aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
-                                <i class="fa fa-search" >search</i>
+                                <button type="button" @click="test" class="fa fa-search">search</button>
                             </span>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <h5 class="modal-title" id="staticBackdropLabel">addressModal</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body h-25">
                         addressModal
                     </div>
                     <div class="modal-footer">
@@ -71,29 +71,30 @@ import axios from 'axios';
 
 export default {
     name: 'registerModals',
+    data() {
+        return {
+            univName: '',
+        }
+    },
     methods: {
         test() {
-      // axios post 요청
-      // axios.post('서버URL', '보낼데이터')
-        const key = '8dd33f9c8964bf00d59a79639cf65f79';
+            // axios post 요청
+            // axios.post('서버URL', '보낼데이터')
+            const key = '8dd33f9c8964bf00d59a79639cf65f79';
 
-        axios({
-            url: `//www.career.go.kr/cnet/openapi/getOpenApi.json?apiKey=${key}`,
-            method: 'get',
-            data: {
-                query: "경기대학교",
-            }
-        });
-    //     .then((json) => {
-    //     this.postList.push(json.data);
-    //     this.moreCnt++;
-    //   }).catch(() => {
-    //     console.log('error: no more url');
-    //   })
-    },
+            axios.get(`//www.career.go.kr/cnet/openapi/getOpenApi?apiKey=${key}&svcType=api&svcCode=SCHOOL&contentType=json&gubun=univ_list&thisPage=1&perPage=10&searchSchulNm=%EA%B2%BD%EA%B8%B0`)
+                .then((json) => {
+                    console.log(json.data.dataSearch.content);
+                }).catch(() => {
+                    console.log('error: no more url');
+                })
+        },
     }
 }
 </script>
 
 <style>
+.h-598{
+    height: 598px;
+}
 </style>
