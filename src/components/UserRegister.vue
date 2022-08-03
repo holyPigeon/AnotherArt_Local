@@ -1,5 +1,4 @@
 <template>
-  <!-- 회원가입 -->
     <div id="wrapper" class="container-fluid">
         <section>
             <div class="container px-4">
@@ -10,18 +9,17 @@
                             <div class="row g-3">
                                 <div class="col-md-6 offset-md-3">
                                     <label for="" class="form-label">이름</label>
-                                    <input type="text" class="form-control" placeholder="이름" value=""
-                                        required>
+                                    <input type="text" class="form-control" placeholder="이름" value="" required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
                                     <label for="" class="form-label">닉네임</label>
-                                    <input type="text" class="form-control" placeholder="닉네임" value=""
-                                        required>
+                                    <input type="text" class="form-control" placeholder="닉네임" value="" required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="studentId" class="form-label">아이디</label> <button class="btn btn-outline-dark">중복체크</button>
+                                    <label for="studentId" class="form-label">아이디</label> <button type="button" class="btn btn-outline-dark"
+                                    data-bs-toggle="modal" data-bs-target="#duplicateCheckModal">중복체크</button>
                                     <input type="text" class="form-control" id="studentId" placeholder="아이디" value=""
                                         required>
                                 </div>
@@ -39,13 +37,14 @@
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="" class="form-label">학교명</label> <button @click="$emit('openUnivModal')" class="btn btn-outline-dark">학교 찾기</button>
-                                    <input type="text" class="form-control" placeholder="학교명" value=""
-                                        required>
+                                    <label for="" class="form-label">학교명</label> <button type="button" class="btn btn-outline-dark"
+                                        data-bs-toggle="modal" data-bs-target="#univModal">학교 찾기</button>
+                                    <input type="text" class="form-control" placeholder="학교명" value="" required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="username" class="form-label">주소</label> <button class="btn btn-outline-dark">주소 찾기</button>
+                                    <label for="username" class="form-label">주소</label> <button type="button" class="btn btn-outline-dark"
+                                        data-bs-toggle="modal" data-bs-target="#addressModal">주소 찾기</button>
                                     <div class="input-group has-validation">
                                         <input type="text" class="form-control" id="username" placeholder="이름" required>
                                     </div>
@@ -80,5 +79,4 @@ export default {
 </script>
 
 <style>
-
 </style>

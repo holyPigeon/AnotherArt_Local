@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <UnivModal v-if="univModal == true"></UnivModal>
+    <RegisterModals></RegisterModals>
     <TermsOfService></TermsOfService>
-    <UserRegister @openUnivModal="openUnivModal"></UserRegister>
-
+    <UserRegister></UserRegister>
   </div>
 
 </template>
@@ -11,25 +10,22 @@
 <script>
 import TermsOfService from './components/TermsOfService.vue'
 import UserRegister from './components/UserRegister.vue'
-import UnivModal from './components/UnivModal.vue'
+import RegisterModals from './components/RegisterModals.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      univModal: false,
+
     }
   },
   methods: {
-    openUnivModal() {
-      this.univModal = true;
-    }
   },
   components: {
     TermsOfService,
     UserRegister,
-    UnivModal
-  }
+    RegisterModals,
+}
 }
 </script>
 

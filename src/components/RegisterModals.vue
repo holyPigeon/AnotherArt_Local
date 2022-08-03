@@ -1,0 +1,99 @@
+<template>
+    <div>
+        <!--duplicateCheckModal-->
+        <div class="modal fade" id="duplicateCheckModal" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">duplicateCheckModal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        duplicateCheckModal
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- univModal -->
+        <div class="modal fade" id="univModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">univModal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group rounded">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon" />
+                            <span class="input-group-text border-0" id="search-addon">
+                                <i class="fa fa-search" >search</i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- addressModal -->
+        <div class="modal fade" id="addressModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">addressModal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        addressModal
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+    name: 'registerModals',
+    methods: {
+        test() {
+      // axios post 요청
+      // axios.post('서버URL', '보낼데이터')
+        const key = '8dd33f9c8964bf00d59a79639cf65f79';
+
+        axios({
+            url: `//www.career.go.kr/cnet/openapi/getOpenApi.json?apiKey=${key}`,
+            method: 'get',
+            data: {
+                query: "경기대학교",
+            }
+        });
+    //     .then((json) => {
+    //     this.postList.push(json.data);
+    //     this.moreCnt++;
+    //   }).catch(() => {
+    //     console.log('error: no more url');
+    //   })
+    },
+    }
+}
+</script>
+
+<style>
+</style>
