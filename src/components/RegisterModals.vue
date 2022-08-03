@@ -33,13 +33,13 @@
                             <input v-model="univName" type="search" class="form-control rounded" placeholder="Search"
                                 aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
-                                <button type="button" @click="test" class="fa fa-search">search</button>
+                                <button type="button" @click="test(univName)" class="btn">search</button>
                             </span>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
+                            <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
+                            <p>{{ univ.adres }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,17 +74,25 @@ export default {
     data() {
         return {
             univName: '',
+            univInfoList: [],
         }
     },
     methods: {
-        test() {
+        test(univName) {
             // axios post 요청
             // axios.post('서버URL', '보낼데이터')
             const key = '8dd33f9c8964bf00d59a79639cf65f79';
+            let newUnivInfoList = [];
 
-            axios.get(`//www.career.go.kr/cnet/openapi/getOpenApi?apiKey=${key}&svcType=api&svcCode=SCHOOL&contentType=json&gubun=univ_list&thisPage=1&perPage=10&searchSchulNm=%EA%B2%BD%EA%B8%B0`)
+            this.univInfoList = [];
+
+            axios.get(`//www.career.go.kr/cnet/openapi/getOpenApi?apiKey=${key}&svcType=api&svcCode=SCHOOL&contentType=json&gubun=univ_list&thisPage=1&perPage=10&searchSchulNm=${univName}`)
                 .then((json) => {
-                    console.log(json.data.dataSearch.content);
+                    // console.log(json.data.dataSearch.content);
+                    newUnivInfoList = json.data.dataSearch.content;
+                    this.univInfoList.push(newUnivInfoList);
+                    // content[i].schoolName -> 학교 이름
+                    // content[i].adres -> 학교 주소
                 }).catch(() => {
                     console.log('error: no more url');
                 })
@@ -94,7 +102,7 @@ export default {
 </script>
 
 <style>
-.h-598{
+.h-598 {
     height: 598px;
 }
 </style>
