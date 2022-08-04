@@ -33,7 +33,7 @@
                             <input v-model="univName" type="search" class="form-control rounded" placeholder="Search"
                                 aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
-                                <button type="button" @click="test(univName)" class="btn btn-sm">search</button>
+                                <button type="button" @click="univSearch(univName)" class="btn">search</button>
                             </span>
                         </div>
                         <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
@@ -80,7 +80,7 @@ export default {
         }
     },
     methods: {
-        test(univName) {
+        univSearch(univName) {
             // axios post 요청
             // axios.post('서버URL', '보낼데이터')
             const key = '8dd33f9c8964bf00d59a79639cf65f79';
