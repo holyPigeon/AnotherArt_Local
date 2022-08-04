@@ -33,12 +33,14 @@
                             <input v-model="univName" type="search" class="form-control rounded" placeholder="Search"
                                 aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
-                                <button type="button" @click="test(univName)" class="btn">search</button>
+                                <button type="button" @click="test(univName)" class="btn btn-sm">search</button>
                             </span>
                         </div>
                         <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
-                            <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
-                            <p>{{ univ.adres }}</p>
+                            <div>
+                                <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
+                                <p>{{ univ.adres }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

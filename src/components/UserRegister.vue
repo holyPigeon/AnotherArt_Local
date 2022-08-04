@@ -18,8 +18,9 @@
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="studentId" class="form-label">아이디</label> <button type="button" class="btn btn-outline-dark"
-                                    data-bs-toggle="modal" data-bs-target="#duplicateCheckModal">중복체크</button>
+                                    <label for="studentId" class="form-label">아이디</label> <button type="button"
+                                        class="btn btn-outline-dark btn-sm mb-2" data-bs-toggle="modal"
+                                        data-bs-target="#duplicateCheckModal">중복체크</button>
                                     <input type="text" class="form-control" id="studentId" placeholder="아이디" value=""
                                         required>
                                 </div>
@@ -37,17 +38,25 @@
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="" class="form-label">학교명</label> <button type="button" class="btn btn-outline-dark"
-                                        data-bs-toggle="modal" data-bs-target="#univModal">학교 찾기</button>
+                                    <label for="" class="form-label">학교명</label> <button type="button"
+                                        class="btn btn-outline-dark btn-sm mb-2" data-bs-toggle="modal"
+                                        data-bs-target="#univModal">학교 찾기</button>
                                     <input type="text" class="form-control" placeholder="학교명" value="" required>
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="username" class="form-label">주소</label> <button type="button" class="btn btn-outline-dark"
-                                        data-bs-toggle="modal" data-bs-target="#addressModal">주소 찾기</button>
-                                    <div class="input-group has-validation">
+                                    <label for="username" class="form-label">주소</label>
+                                    <!-- <button type="button" class="btn btn-outline-dark btn-sm mb-2"
+                                        data-bs-toggle="modal" data-bs-target="#addressModal">주소 찾기</button> -->
+                                    <br>
+                                    <input type="text" id="sample6_postcode" class="form-control" placeholder="우편번호">
+                                    <input type="button" @click="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                                    <input type="text" id="sample6_address" placeholder="주소"><br>
+                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+                                    <input type="text" id="sample6_extraAddress" placeholder="참고항목">
+                                    <!-- <div class="input-group has-validation">
                                         <input type="text" class="form-control" id="username" placeholder="이름" required>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
