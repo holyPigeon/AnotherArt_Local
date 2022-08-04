@@ -51,9 +51,9 @@
                                         data-bs-toggle="modal" data-bs-target="#addressModal">주소 찾기</button> -->
                                     <br>
                                     <input type="text" v-model="postcode" class="form-control" placeholder="우편번호">
-                                    <input type="text" id="address" class="form-control" placeholder="주소">
+                                    <input type="text" v-model="address" id="address" class="form-control" placeholder="주소">
                                     <input type="text" id="detailAddress" class="form-control" placeholder="상세주소">
-                                    <input type="text" id="extraAddress" class="form-control" placeholder="참고항목">
+                                    <input type="text" v-model="extraAddress" id="extraAddress" class="form-control" placeholder="참고항목">
                                     <!-- <div class="input-group has-validation">
                                         <input type="text" class="form-control" id="username" placeholder="이름" required>
                                     </div> -->
@@ -84,6 +84,13 @@
 <script>
 export default {
     name: 'userRegister',
+    data() {
+        return {
+            postcode: '',
+            address: '',
+            extraAddress: '',
+        }
+    },
     methods: {
         execDaumPostcode() {
             new window.daum.Postcode({
