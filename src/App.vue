@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <button type="button" @click="page[0] = 1; page[1] = 0;" class="btn btn-outline-dark">1</button>
-      <button type="button" @click="page[0] = 0; page[1] = 1;" class="btn btn-outline-dark">2</button>
+
+      <button type="button" @click="page = 1;" class="btn btn-outline-dark">1</button>
+      <button type="button" @click="page = 2;" class="btn btn-outline-dark">2</button>
     </div>
-    <TermsOfService v-if="page[0] = 1"></TermsOfService>
+    <TermsOfService v-if="page == 1"></TermsOfService>
     <RegisterModals></RegisterModals>
-    <UserRegister v-if="page[1] = 1"></UserRegister>
+    <UserRegister v-if="page == 2"></UserRegister>
   </div>
 
 </template>
@@ -20,7 +21,7 @@ export default {
   name: 'App',
   data() {
     return {
-      page: [1, 0],
+      page: 1
     }
   },
   methods: {
