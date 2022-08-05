@@ -25,21 +25,23 @@
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content h-598">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">univModal</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">학교 찾기</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="input-group rounded">
-                            <input v-model="univName" type="search" class="form-control rounded" placeholder="Search"
+                            <input v-model="univSearchKeyword" type="search" class="form-control rounded" placeholder="학교명"
                                 aria-label="Search" aria-describedby="search-addon" />
                             <span class="input-group-text border-0" id="search-addon">
-                                <button type="button" @click="univSearch(univName)" class="btn">search</button>
+                                <button type="button" @click="univSearch(univSearchKeyword)" class="btn">검색</button>
                             </span>
                         </div>
                         <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
                             <div>
+                                <button type="button" @click="univName = univ.schoolName + ' ' + univ.campusName;" class="btn btn-outline-dark" data-bs-dismiss="modal" aria-label="Close">
                                 <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
                                 <p>{{ univ.adres }}</p>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -76,11 +78,12 @@ export default {
     data() {
         return {
             univName: '',
+            univSearchKeyword: '',
             univInfoList: [],
         }
     },
     methods: {
-        univSearch(univName) {
+        univSearch(univSearchKeyword) {
             // axios post 요청
             // axios.post('서버URL', '보낼데이터')
             const key = '8dd33f9c8964bf00d59a79639cf65f79';
@@ -88,7 +91,7 @@ export default {
 
             this.univInfoList = [];
 
-            axios.get(`//www.career.go.kr/cnet/openapi/getOpenApi?apiKey=${key}&svcType=api&svcCode=SCHOOL&contentType=json&gubun=univ_list&thisPage=1&perPage=10&searchSchulNm=${univName}`)
+            axios.get(`//www.career.go.kr/cnet/openapi/getOpenApi?apiKey=${key}&svcType=api&svcCode=SCHOOL&contentType=json&gubun=univ_list&thisPage=1&perPage=10&searchSchulNm=${univSearchKeyword}`)
                 .then((json) => {
                     // console.log(json.data.dataSearch.content);
                     newUnivInfoList = json.data.dataSearch.content;
