@@ -1,13 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container bg-image">
     <div>
-
-      <button type="button" @click="page = 1;" class="btn btn-outline-dark">1</button>
-      <button type="button" @click="page = 2;" class="btn btn-outline-dark">2</button>
+      <button type="button" @click="page = 1;" class="btn btn-outline-light">1</button>
+      <button type="button" @click="page = 2;" class="btn btn-outline-light">2</button>
     </div>
-    <TermsOfService v-if="page == 1"></TermsOfService>
-    <RegisterModals></RegisterModals>
-    <UserRegister v-if="page == 2"></UserRegister>
+    <div>
+      <TermsOfService v-if="page == 1"></TermsOfService>
+      <RegisterModals></RegisterModals>
+      <UserRegister v-if="page == 2"></UserRegister>
+    </div>
   </div>
 
 </template>
@@ -30,12 +31,17 @@ export default {
     TermsOfService,
     UserRegister,
     RegisterModals,
-}
+  }
 }
 </script>
 
 <style>
 body {
-  background-color: rgb(249, 249, 249);
+  /* background-color: rgb(249, 249, 249); */
+  background-image: url('./assets/registerBackgroundImage.png');
 }
+
+/* .bg-image {
+  background-image: url('./assets/registerBackgroundImage.png');
+} */
 </style>

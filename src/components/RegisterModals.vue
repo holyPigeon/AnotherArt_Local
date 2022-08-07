@@ -38,7 +38,8 @@
                         </div>
                         <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
                             <div>
-                                <button type="button" @click="univName = univ.schoolName + ' ' + univ.campusName;" class="btn btn-outline-dark" data-bs-dismiss="modal" aria-label="Close">
+                                <button type="button" @click="univName = univ.schoolName + ' ' + univ.campusName;" 
+                                class="btn btn-outline-dark" style="width: 466px;"  data-bs-dismiss="modal" aria-label="Close">
                                 <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
                                 <p>{{ univ.adres }}</p>
                                 </button>
