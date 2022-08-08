@@ -2,8 +2,12 @@
     <div id="wrapper" class="container-fluid">
         <div class="container px-4s">
             <div class="row gx-4 justify-content-center m-auto">
-                <div class="col-md-10 position-static d-block p-3 bg-light " style="--bs-bg-opacity: .5;">
-                    <h4 class="mb-3 text-center">아이디 생성</h4>
+                <div class="col-md-10 position-static d-block p-3 bg-light" style="--bs-bg-opacity: .5;">
+
+                    <div class="p-4">
+                        <h4 class="mb-3 text-center text-dark fs-3" style="opacity: 0.7;">회원 가입</h4>
+                    </div>
+
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
                             <div class="col-md-6 offset-md-3 mb-3">
@@ -27,7 +31,8 @@
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="form-control btn btn-outline-dark p-3 mt-1"
-                                            data-bs-toggle="modal" data-bs-target="#duplicateCheckModal">중복체크</button>
+                                            style="opacity: 0.7;" data-bs-toggle="modal"
+                                            data-bs-target="#duplicateCheckModal">중복체크</button>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +52,7 @@
                         </div>
 
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-light">
                         </div>
 
                         <div class="row g-3">
@@ -61,15 +66,13 @@
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="form-control btn btn-outline-dark p-3 mt-1"
-                                            data-bs-toggle="modal" data-bs-target="#univModal">학교 찾기</button>
+                                            style="opacity: 0.7;" data-bs-toggle="modal" data-bs-target="#univModal">학교
+                                            찾기</button>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 offset-md-3 mb-3">
-
-                                <!-- <button type="button" class="btn btn-outline-dark btn-sm mb-2"
-                                        data-bs-toggle="modal" data-bs-target="#addressModal">주소 찾기</button> -->
                                 <div class="row">
                                     <label for="username" class="form-label">주소</label>
                                     <div class="col-md-8 mb-2">
@@ -78,13 +81,9 @@
                                     </div>
                                     <div class="col-md-4 mb-1">
                                         <input type="button" @click="execDaumPostcode()" value="주소 검색"
-                                            class="form-control btn btn-outline-dark p-2 mt-1" />
+                                            class="form-control btn btn-outline-dark p-2 mt-1" style="opacity: 0.7;" />
                                     </div>
                                 </div>
-                                <!-- <div class="row">
-                                    <input type="text" v-model="postcode" class="form-control form-control-lg col-md col-md-offset-1" placeholder="우편번호">
-                                    <input type="button" @click="execDaumPostcode()" class="form-label col-md" value="우편번호 찾기">
-                                    </div> -->
                                 <input type="text" v-model="address" id="address"
                                     class="form-control form-control-lg mb-2" placeholder="주소">
                                 <input type="text" id="detailAddress" class="form-control form-control-lg mb-2"
@@ -98,17 +97,17 @@
                             </div>
 
                             <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="phoneNumber" class="form-label">전화번호(-을 빼고)</label>
+                                <label for="phoneNumber" class="form-label">전화번호('-'을 빼고 입력)</label>
                                 <input type="tel" class="form-control form-control-lg p-3" id="phoneNumber"
                                     placeholder="전화번호" value="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-light">
                         </div>
                         <div class="row">
-                            <button class="btn btn-outline-dark btn-lg col-md-6 offset-md-3 p-3" type="submit"
-                                id="signup">완료</button>
+                            <button class="btn btn-outline-dark btn-lg col-md-6 offset-md-3 p-3" style="opacity: 0.7;"
+                                type="submit" id="signup">완료</button>
                         </div>
                     </form>
                 </div>
