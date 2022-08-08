@@ -1,9 +1,9 @@
 <template>
-    <div class="container text-center p-5">
+    <div class="container text-center bg-light p-5" style="--bs-bg-opacity: .5; color: #49433c;">
         <div class="row mt-5">
             <div class="col-2">
             </div>
-            <div class="border border-3 p-3 col-8">
+            <div class="p-3 col-8" style="border: 1px solid #49433c;">
                 <ul>
                     <li>제1장 총칙
                         제1조 (목적)
@@ -45,7 +45,7 @@
         <div class="row mt-5">
             <div class="col-2">
             </div>
-            <div class="border border-3 p-3 col-8">
+            <div class="p-3 col-8" style="border: 1px solid #49433c;">
                 <ul>
                     <li>제1장 총칙
                         제1조 (목적)

@@ -2,7 +2,7 @@
     <div id="wrapper" class="container-fluid">
         <div class="container px-4s">
             <div class="row gx-4 justify-content-center m-auto">
-                <div class="col-md-10 position-static d-block p-3 bg-light">
+                <div class="col-md-10 position-static d-block p-3 bg-light " style="--bs-bg-opacity: .5;">
                     <h4 class="mb-3 text-center">아이디 생성</h4>
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
@@ -30,8 +30,6 @@
                                             data-bs-toggle="modal" data-bs-target="#duplicateCheckModal">중복체크</button>
                                     </div>
                                 </div>
-
-
                             </div>
 
                             <div class="col-md-6 offset-md-3 mb-3">
@@ -49,7 +47,7 @@
                         </div>
 
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
                         </div>
 
                         <div class="row g-3">
@@ -106,7 +104,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
                         </div>
                         <div class="row">
                             <button class="btn btn-outline-dark btn-lg col-md-6 offset-md-3 p-3" type="submit"
