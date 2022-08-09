@@ -1,11 +1,11 @@
 <template>
     <div id="wrapper" class="container-fluid">
-        <div class="container px-4s">
+        <div class="container px-4s my-5">
             <div class="row gx-4 justify-content-center m-auto">
-                <div class="col-md-10 position-static d-block p-3 bg-light" style="--bs-bg-opacity: .5;">
+                <div class="col-md-10 position-static d-block p-3 bg-light text-black" style="--bs-bg-opacity: .4; --bs-text-opacity: 0.6;">
 
                     <div class="p-4">
-                        <h4 class="mb-3 text-center text-dark fs-3" style="opacity: 0.7;">회원 가입</h4>
+                        <h4 class="mb-3 text-center text-black fs-3" style="--bs-text-opacity: 0.6;">회원가입</h4>
                     </div>
 
                     <form class="needs-validation" novalidate>
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
                         </div>
 
                         <div class="row g-3">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
                         </div>
                         <div class="row">
                             <button class="btn btn-outline-dark btn-lg col-md-6 offset-md-3 p-3" style="opacity: 0.7;"

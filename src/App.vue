@@ -38,7 +38,7 @@ export default {
 <style>
 body {
   /* background-color: rgb(249, 249, 249); */
-  background-image: url('./assets/registerBackgroundImage.png');
+  /* background-image: url('./assets/registerBackgroundImage3.jpg'); */
   background-size: cover;
 }
 
