@@ -24,9 +24,9 @@
 
                             <div class="col-md-6 offset-md-3 mb-2">
                                 <div class="row">
-                                    <label for="Id" class="form-label">아이디</label>
+                                    <label for="id" class="form-label">아이디</label>
                                     <div class="col-md-8 mb-2">
-                                        <input type="text" class="form-control form-control-lg p-3" id="Id" name="Id"
+                                        <input type="text" class="form-control form-control-lg p-3" id="id" name="id"
                                             placeholder="아이디" value="" required>
                                     </div>
                                     <div class="col-md-4">
@@ -58,11 +58,11 @@
                         <div class="row g-3">
 
                             <div class="col-md-6 offset-md-3 mb-2">
-                                <label for="" class="form-label">학교명</label>
+                                <label for="university" class="form-label">학교명</label>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control form-control-lg p-3" placeholder="학교명"
-                                            value="" required>
+                                        <input type="text" class="form-control form-control-lg p-3" id="university" 
+                                        name="university" placeholder="학교명" required>
                                     </div>
                                     <div class="col-md-4">
                                         <button type="button" class="form-control btn btn-outline-dark p-3 mt-1"
@@ -74,22 +74,22 @@
 
                             <div class="col-md-6 offset-md-3 mb-3">
                                 <div class="row">
-                                    <label for="username" class="form-label">주소</label>
+                                    <label for="postcode" class="form-label">주소</label>
                                     <div class="col-md-8 mb-2">
-                                        <input type="text" v-model="postcode" class="form-control form-control-lg"
-                                            placeholder="우편번호" />
+                                        <input type="text" v-model="postcode" class="form-control form-control-lg" id="postcode"
+                                        name="postcode" placeholder="우편번호" required/>
                                     </div>
                                     <div class="col-md-4 mb-1">
                                         <input type="button" @click="execDaumPostcode()" value="주소 검색"
                                             class="form-control btn btn-outline-dark p-2 mt-1" style="opacity: 0.7;" />
                                     </div>
                                 </div>
-                                <input type="text" v-model="address" id="address"
-                                    class="form-control form-control-lg mb-2" placeholder="주소">
-                                <input type="text" id="detailAddress" class="form-control form-control-lg mb-2"
-                                    placeholder="상세주소">
-                                <input type="text" v-model="extraAddress" id="extraAddress"
-                                    class="form-control form-control-lg" placeholder="참고항목">
+                                <input type="text" v-model="address" class="form-control form-control-lg mb-2" 
+                                id="address" name="address" placeholder="주소" required>
+                                <input type="text" class="form-control form-control-lg mb-2"
+                                id="detailAddress" name="detailAddress" placeholder="상세주소" required>
+                                <input type="text" v-model="extraAddress" class="form-control form-control-lg"
+                                id="extraAddress" name="extraAddress" placeholder="참고항목">
 
                                 <!-- <div class="input-group has-validation">
                                         <input type="text" class="form-control" id="username" placeholder="이름" required>
@@ -99,7 +99,7 @@
                             <div class="col-md-6 offset-md-3 mb-3">
                                 <label for="phoneNumber" class="form-label">전화번호('-'을 빼고 입력)</label>
                                 <input type="tel" class="form-control form-control-lg p-3" id="phoneNumber"
-                                    placeholder="전화번호" value="" required>
+                                name="phoneNumber" placeholder="전화번호" value="" required>
                             </div>
                         </div>
                         <div class="row">
