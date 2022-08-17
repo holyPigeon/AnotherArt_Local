@@ -2,16 +2,13 @@
   <div class="container">
     <div>
       <RegisterModals></RegisterModals>
+      <div class="btn-group">
+        <button @click="$router.push('/');" class="btn btn-outline-dark">Home</button>
+        <button @click="$router.push('/CreateAccount/TermsOfService')"
+          class="btn btn-outline-dark">CreateAccount</button>
+        <button @click="$router.push('/ArtworkRegister')" class="btn btn-outline-dark">ArtworkRegister</button>
+      </div>
       <router-view></router-view>
-      <div>
-        <router-link to="/UserRegister">UserRegister</router-link>
-      </div>
-      <div>
-        <router-link to="/ArtworkRegister">ArtworkRegister</router-link>
-      </div>
-      <div>
-        <router-link to="/TermsOfService">TermsOfService</router-link>
-      </div>
     </div>
   </div>
 
@@ -38,7 +35,7 @@ export default {
 <style>
 body {
   /* background-color: rgb(249, 249, 249); */
-  background-image: url('./assets/registerBackgroundImage3.jpg');
-  background-size: cover;
+  /* background-image: url('./assets/registerBackgroundImage3.jpg');
+  background-size: cover;   */
 }
 </style>

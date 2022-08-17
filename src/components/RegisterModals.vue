@@ -31,7 +31,7 @@
                     <div class="modal-body">
                         <div class="input-group rounded">
                             <input v-model="univSearchKeyword" type="search" class="form-control rounded" placeholder="학교명"
-                                aria-label="Search" aria-describedby="search-addon" />
+                                aria-label="Search" aria-describedby="search-addon" autofucus/>
                             <span class="input-group-text border-0" id="search-addon">
                                 <button type="button" @click="univSearch(univSearchKeyword)" class="btn">검색</button>
                             </span>
@@ -39,7 +39,7 @@
                         <div v-for="(univ, i) in univInfoList[0]" :key="i" class="mt-3">
                             <div>
                                 <button type="button" @click="univName = univ.schoolName + ' ' + univ.campusName;" 
-                                class="btn btn-outline-dark" style="width: 466px;"  data-bs-dismiss="modal" aria-label="Close">
+                                class="btn btn-outline-dark pt-3" style="width: 466px;"  data-bs-dismiss="modal" aria-label="Close">
                                 <h4>{{ univ.schoolName }} ({{ univ.campusName }})</h4>
                                 <p>{{ univ.adres }}</p>
                                 </button>

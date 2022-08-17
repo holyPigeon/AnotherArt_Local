@@ -48,7 +48,8 @@
                         <div class="col-md-8 offset-md-2 p-0">
                             <div class="fs-6 fw-bold text-start ps-3">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label ms-2 text-black" for="flexCheckDefault" style="--bs-text-opacity: 0.6;">약관동의</label>
+                                <label class="form-check-label ms-2 text-black" for="flexCheckDefault"
+                                    style="--bs-text-opacity: 0.6;">약관동의</label>
                             </div>
                         </div>
                     </div>
@@ -98,15 +99,16 @@
                         <div class="col-md-8 offset-md-2 p-0">
                             <div class="fs-6 fw-bold text-start ps-3">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label ms-2 text-black" style="--bs-text-opacity: 0.6;" for="flexCheckDefault">약관동의</label>
+                                <label class="form-check-label ms-2 text-black" style="--bs-text-opacity: 0.6;"
+                                    for="flexCheckDefault">약관동의</label>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-8 offset-md-2">
                             <div class="fs-6 fw-bold text-center ps-3">
-                                <button type="button" class="btn btn-outline-dark btn-lg"
-                                    style="width: 400px;">다음</button>
+                                <button type="button" @click="$router.push('/CreateAccount/UserRegister')"
+                                    class="btn btn-outline-dark btn-lg" style="width: 400px;">다음</button>
                             </div>
                         </div>
                     </div>

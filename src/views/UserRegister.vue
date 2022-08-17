@@ -2,7 +2,7 @@
     <div id="wrapper" class="container-fluid">
         <div class="container px-4s my-5">
             <div class="row gx-4 justify-content-center m-auto">
-                <div class="col-md-10 position-static d-block p-3 bg-light text-black" style="--bs-bg-opacity: .4; --bs-text-opacity: 0.6;">
+                <div class="col-md-10 position-static d-block p-3 text-black" style="--bs-bg-opacity: .4; --bs-text-opacity: 0.6;">
 
                     <div class="p-4">
                         <h4 class="mb-3 text-center text-black fs-3" style="--bs-text-opacity: 0.6;">회원가입</h4>
@@ -10,21 +10,24 @@
 
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
-                            <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="name" class="form-label">이름</label>
+                            <div class="col-md-6 offset-md-3">
                                 <input type="text" class="form-control form-control-lg p-3" id="name" name="name"
                                     placeholder="이름" value="" required>
                             </div>
 
-                            <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="nickname" class="form-label">닉네임</label>
+                            <div class="col-md-6 offset-md-3">
                                 <input type="text" class="form-control form-control-lg p-3" id="nickname"
                                     name="nickname" placeholder="닉네임" value="" required>
                             </div>
+                        </div>
 
-                            <div class="col-md-6 offset-md-3 mb-2">
+                        <div class="row">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-dark" style="opacity: 0.1;">
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 offset-md-3">
                                 <div class="row">
-                                    <label for="id" class="form-label">아이디</label>
                                     <div class="col-md-8 mb-2">
                                         <input type="text" class="form-control form-control-lg p-3" id="id" name="id"
                                             placeholder="아이디" value="" required>
@@ -37,14 +40,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="password" class="form-label">암호</label>
+                            <div class="col-md-6 offset-md-3">
                                 <input type="password" class="form-control form-control-lg p-3" id="password"
                                     name="password" placeholder="암호" value="" required>
                             </div>
 
-                            <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="password2" class="form-label">암호 확인</label>
+                            <div class="col-md-6 offset-md-3">
                                 <input type="password" class="form-control form-control-lg p-3" id="password2"
                                     name="password2" placeholder="암호 확인" value="" required>
                             </div>
@@ -52,13 +53,12 @@
                         </div>
 
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-dark" style="opacity: 0.1;">
                         </div>
 
                         <div class="row g-3">
 
-                            <div class="col-md-6 offset-md-3 mb-2">
-                                <label for="university" class="form-label">학교명</label>
+                            <div class="col-md-6 offset-md-3">
                                 <div class="row">
                                     <div class="col-md-8">
                                         <input type="text" class="form-control form-control-lg p-3" id="university" 
@@ -71,10 +71,17 @@
                                     </div>
                                 </div>
                             </div>
+                        
+                        </div>
+                        
+                        <div class="row">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-dark" style="opacity: 0.1;">
+                        </div>
 
-                            <div class="col-md-6 offset-md-3 mb-3">
+                        <div class="row g-3">
+
+                            <div class="col-md-6 offset-md-3">
                                 <div class="row">
-                                    <label for="postcode" class="form-label">주소</label>
                                     <div class="col-md-8 mb-2">
                                         <input type="text" v-model="postcode" class="form-control form-control-lg" id="postcode"
                                         name="postcode" placeholder="우편번호" required/>
@@ -95,17 +102,25 @@
                                         <input type="text" class="form-control" id="username" placeholder="이름" required>
                                     </div> -->
                             </div>
+                        </div>
+                        
+                        <div class="row">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-dark" style="opacity: 0.1;">
+                        </div>
 
-                            <div class="col-md-6 offset-md-3 mb-3">
-                                <label for="phoneNumber" class="form-label">전화번호('-'을 빼고 입력)</label>
+                        <div class="row g-3">
+
+                            <div class="col-md-6 offset-md-3">
                                 <input type="tel" class="form-control form-control-lg p-3" id="phoneNumber"
-                                name="phoneNumber" placeholder="전화번호" value="" required>
+                                name="phoneNumber" placeholder="전화번호('-'을 빼고 입력)" value="" required>
                             </div>
                         </div>
+
                         <div class="row">
-                            <hr class="my-4 col-md-12 offset-md-0 border border-2 border-light">
+                            <hr class="my-4 col-md-12 offset-md-0 border border-1 border-dark" style="opacity: 0.1;">
                         </div>
-                        <div class="row">
+                        
+                        <div class="row g-3">
                             <button class="btn btn-outline-dark btn-lg col-md-6 offset-md-3 p-3" style="opacity: 0.7;"
                                 type="submit" id="signup">완료</button>
                         </div>
@@ -173,4 +188,7 @@ export default {
 </script>
 
 <style>
+    input::placeholder {
+    font-size: 14px;
+}
 </style>
