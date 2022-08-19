@@ -2,7 +2,7 @@
     <div>
         <div class="row g-3">
             <div :class="col_style" class="mb-2">
-                <label for="name" class="form-label">제목</label>
+                <label for="name" class="form-label">작품목</label>
                 <input type="text" class="form-control form-control-lg p-3" id="name" name="name" placeholder=""
                     value="" required>
             </div>
@@ -40,6 +40,17 @@
                     </div>
                 </div>
             </div>
+
+            <div :class="col_style" class="mb-2">
+                <label for="" class="form-label">경매 날짜 선택</label>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="date" class="form-control p-3" v-model="product.product_date" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
@@ -48,10 +59,16 @@
 export default {
     name: 'auctionWork',
     data() {
-    return {
-      col_style: 'col-md-10 offset-md-1'
-    }
-  },
+        return {
+            col_style: 'col-md-10 offset-md-1',
+            product: {
+                product_name: '',
+                uploadImageFileimage: '',
+                image: '',
+                product_date: '',
+            },
+        }
+    },
 }
 </script>
 

@@ -3,6 +3,7 @@ import UserRegister from './views/UserRegister.vue'
 import ArtworkRegister from './views/ArtworkRegister.vue'
 import TermsOfService from './views/TermsOfService.vue'
 import CreateAccount from './views/CreateAccount.vue'
+import Community from './views/CommunityPage.vue'
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
   {
     path: "/Artworkregister",
     component: ArtworkRegister,
+  },
+  {
+    path: "/Community",
+    component: Community,
   },
 
 

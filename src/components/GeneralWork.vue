@@ -2,7 +2,7 @@
     <div>
         <div class="row g-3">
             <div :class="col_style" class="mb-2">
-                <label for="name" class="form-label">제목</label>
+                <label for="name" class="form-label">작품명</label>
                 <input type="text" class="form-control form-control-lg p-3" id="name" name="name" placeholder=""
                     value="" required>
             </div>
